@@ -42,7 +42,7 @@ module Solargraph
       # @param text [String]
       # @return [String]
       def decode text
-        CGI.unescape(text)
+        CGI.unescape(text.gsub('+', '%2B'))
       end
     end
   end
